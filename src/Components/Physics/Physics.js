@@ -71,7 +71,7 @@ const Physics = () => {
         <div className='container mx-auto'>
             <h1 className='text-4xl font-bold text-[#042954] py-8'>Course <span className='text-4xl'>&#8688;</span> Physics</h1>
             <div className="course_banner grid grid-cols-1 gap-10 md:grid-cols-2">
-                <div className="subject bg-white shadow-lg px-4 py-8 pb-28">
+                <div className="subject bg-white shadow-lg px-4 md:px-5 py-8 pb-28">
                     <h1 className='text-6xl text-[#042954] font-semibold mb-6'>Physics</h1>
                     <div className="flex">
                         <div className="content">
@@ -89,15 +89,15 @@ const Physics = () => {
                         </div>
                     </div>
                 </div>
-                <div className="notification bg-white shadow-lg px-4 py-8">
+                <div className="notification bg-white shadow-lg px-4 md:px-5 py-8">
                     <h1 className='title_text'>Course Notification</h1>
                     {
                         notification.map((item, index) => {
                             return (
                                 <div key={index}>
                                     <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-${item?.buttonColor} w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
-                                    <h1 className='text-secondary font-medium hover:underline cursor-pointer'>{item.title}</h1>
-                                    <small className='text-black'>Student Name / 5 minute ago</small>
+                                    <h1 className='text-secondary w-fit font-medium hover:underline cursor-pointer'>{item.title}</h1>
+                                    <small className='text-[#646464]'>Student Name / 5 minute ago</small>
                                     <hr />
                                 </div>
                             )
@@ -109,8 +109,8 @@ const Physics = () => {
             </div>
 
             {/* Course Summery */}
-            <div className="business-summery mt-10 pb-10 grid px-2 sm:px-0 grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto">
-                <div className="card bg-white lg:w-62 md:w-30 image-full mx-auto">
+            <div className="business-summery mt-10 pb-10 grid px-4 md:px-5 sm:px-0 grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto">
+                <div className="card bg-white md:px-5 px-2 lg:w-62 md:w-30 image-full mx-auto">
                     <figure></figure>
                     <div className="card-body justify-end">
                         <div className=''>
@@ -133,7 +133,7 @@ const Physics = () => {
 
             {/* Notice board */}
             <div className="flex">
-                <div className="notice bg-white w-3/5">
+                <div className="notice shadow-lg bg-white w-[65%] px-4 md:px-5 py-8">
                     <h1 className='title_text'>Notice Board</h1>
                     {
                         noticeBoardData.map((item, index) => {
@@ -144,18 +144,19 @@ const Physics = () => {
                                         <h1 className='ml-2'>{item.buttonData}</h1>
                                     </div>
 
-                                    <h1 className='text-[#324D90]'>
+                                    <h1 className='text-[#324D90] mb-2 hover:underline cursor-pointer w-fit'>
                                         {item.details.includes("&") ?
                                             item.details.split("&").map((item, index) => {
                                                 return <span key={index}>{item}<br /></span>
                                             }) : item.details}
                                     </h1>
+                                    <small className='text-[#646464]'>{item.timing}</small>
                                 </div>
                             )
                         })
                     }
                 </div>
-                <div className="schedule">
+                <div className="schedule shadow-lg px-4 md:px-5 bg-white ml-auto w-[30%] py-8">
                     <h1 className='title_text'>Course Schedule</h1>
                 </div>
             </div>
