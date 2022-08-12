@@ -36,8 +36,8 @@ const Physics = () => {
                         </div>
                         <div className="images relative flex-col flex justify-center items-center">
                             <div>
-                                <img className='w-1/2 mx-auto' src={CourseImage} alt="" />
-                                <img className='w-1/4 absolute bottom-0 right-1/4' src={InsImage} alt="" />
+                                <img className='lg:w-1/2 sm:w-2/3 w-full mx-auto' src={CourseImage} alt="" />
+                                <img className='lg:w-1/4 md:bottom-5 sm:-bottom-5 sm:w-1/3 w-1/2 absolute bottom-0 right-1/4' src={InsImage} alt="" />
                             </div>
                             <button className='absolute btn btn-primary btn-md right-16 -bottom-24'>Start Class</button>
                         </div>
