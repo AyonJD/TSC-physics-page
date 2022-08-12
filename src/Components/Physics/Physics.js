@@ -1,6 +1,11 @@
 import React from 'react';
 import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
+import CourseSummery from './CourseSummery';
+import { BiWorld } from 'react-icons/bi';
+import { IoIosPeople } from 'react-icons/io';
+import { BsBookHalf } from 'react-icons/bs';
+import { FiActivity } from 'react-icons/fi';
 
 const Physics = () => {
     const notification = [
@@ -19,13 +24,30 @@ const Physics = () => {
             title: "Class Schedule 10.30 am for class 9-10 physics",
             notificationTimer: "Student Name / 5 minute ago",
         },
-    ]
+    ];
+    const counterCardDara = [
+        {
+            title: "Course Students",
+            icon: <IoIosPeople></IoIosPeople>,
+            end: 23,
+        },
+        {
+            title: "Course Chapters",
+            icon: <BsBookHalf></BsBookHalf>,
+            end: 12,
+        },
+        {
+            title: "Course Activity",
+            icon: <FiActivity></FiActivity>,
+            end: 40,
+        },
+    ];
 
     return (
         <div className='container mx-auto'>
             <h1 className='text-4xl font-bold text-[#042954] py-8'>Course <span className='text-4xl'>&#8688;</span> Physics</h1>
             <div className="course_banner grid grid-cols-1 gap-10 md:grid-cols-2">
-                <div className="subject bg-white px-4 py-8 pb-28">
+                <div className="subject bg-white shadow-lg px-4 py-8 pb-28">
                     <h1 className='text-6xl text-[#042954] font-semibold mb-6'>Physics</h1>
                     <div className="flex">
                         <div className="content">
@@ -43,7 +65,7 @@ const Physics = () => {
                         </div>
                     </div>
                 </div>
-                <div className="notification bg-white px-4 py-8">
+                <div className="notification bg-white shadow-lg px-4 py-8">
                     <h1 className='title_text'>Course Notification</h1>
                     {
                         notification.map((item, index) => {
@@ -60,6 +82,28 @@ const Physics = () => {
 
 
                 </div>
+            </div>
+
+            <div className="business-summery mt-10 pb-10 grid px-2 sm:px-0 grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto">
+                <div className="card bg-white lg:w-62 md:w-30 image-full mx-auto">
+                    <figure></figure>
+                    <div className="card-body justify-end">
+                        <div className=''>
+                            <div className='text-center text-5xl font-bold text-base-100'>A+</div>
+                            <p className='text-center md:text-2xl text-xl font-medium text-base-100'>Course Rating</p>
+                        </div>
+                    </div>
+                </div>
+                {
+                    counterCardDara.map((item, index) => {
+                        return <CourseSummery
+                            key={index}
+                            icon={item.icon}
+                            end={item.end}
+                            title={item.title}
+                        />
+                    })
+                }
             </div>
         </div>
     );
