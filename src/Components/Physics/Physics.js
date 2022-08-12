@@ -2,25 +2,25 @@ import React from 'react';
 import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
 import CourseSummery from './CourseSummery';
-import { BiWorld } from 'react-icons/bi';
 import { IoIosPeople } from 'react-icons/io';
 import { BsBookHalf } from 'react-icons/bs';
 import { FiActivity } from 'react-icons/fi';
+import { RiErrorWarningFill } from 'react-icons/ri';
 
 const Physics = () => {
     const notification = [
         {
-            button: "secondary",
+            buttonColor: "secondary",
             title: "Enrollment request for class 9-10 physics",
             notificationTimer: "Student Name / 5 minute ago",
         },
         {
-            button: "accent",
+            buttonColor: "accent",
             title: "Exam Schedule 8.30 am for class 9-10 physics",
             notificationTimer: "Student Name / 5 minute ago",
         },
         {
-            button: "neutral",
+            buttonColor: "neutral",
             title: "Class Schedule 10.30 am for class 9-10 physics",
             notificationTimer: "Student Name / 5 minute ago",
         },
@@ -42,6 +42,30 @@ const Physics = () => {
             end: 40,
         },
     ];
+
+    const noticeBoardData = [
+        {
+            buttonData: "No exams",
+            buttonColor: "secondary",
+            details: "No exam will be taken next thursday.",
+            timing: "5 minute ago",
+            icon: <RiErrorWarningFill></RiErrorWarningFill>
+        },
+        {
+            buttonData: "Extra Class",
+            buttonColor: "secondary",
+            details: "Extra class will be held 29th aug 10 am",
+            timing: "1 hour ago",
+            icon: <RiErrorWarningFill></RiErrorWarningFill>
+        },
+        {
+            buttonData: "Extra Class",
+            buttonColor: "warning",
+            details: "Mid exam will be taken thursday. & The syllabus: & -> Chapter 10 all & -> CHapter three",
+            timing: "2 days ago",
+            icon: <RiErrorWarningFill></RiErrorWarningFill>
+        },
+    ]
 
     return (
         <div className='container mx-auto'>
@@ -71,9 +95,9 @@ const Physics = () => {
                         notification.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-${item.button} w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
+                                    <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-${item?.buttonColor} w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
                                     <h1 className='text-secondary font-medium hover:underline cursor-pointer'>{item.title}</h1>
-                                    <small>Student Name / 5 minute ago</small>
+                                    <small className='text-black'>Student Name / 5 minute ago</small>
                                     <hr />
                                 </div>
                             )
@@ -84,6 +108,7 @@ const Physics = () => {
                 </div>
             </div>
 
+            {/* Course Summery */}
             <div className="business-summery mt-10 pb-10 grid px-2 sm:px-0 grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto">
                 <div className="card bg-white lg:w-62 md:w-30 image-full mx-auto">
                     <figure></figure>
@@ -105,7 +130,36 @@ const Physics = () => {
                     })
                 }
             </div>
-        </div>
+
+            {/* Notice board */}
+            <div className="flex">
+                <div className="notice bg-white w-3/5">
+                    <h1 className='title_text'>Notice Board</h1>
+                    {
+                        noticeBoardData.map((item, index) => {
+                            return (
+                                <div key={index}>
+                                    <div className={`bg-${item.buttonColor} rounded-full my-2 pl-3 py-2 flex items-center w-full`}>
+                                        <div className='text-3xl text-white'>{item.icon}</div>
+                                        <h1 className='ml-2'>{item.buttonData}</h1>
+                                    </div>
+
+                                    <h1 className='text-[#324D90]'>
+                                        {item.details.includes("&") ?
+                                            item.details.split("&").map((item, index) => {
+                                                return <span key={index}>{item}<br /></span>
+                                            }) : item.details}
+                                    </h1>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className="schedule">
+                    <h1 className='title_text'>Course Schedule</h1>
+                </div>
+            </div>
+        </div >
     );
 };
 
