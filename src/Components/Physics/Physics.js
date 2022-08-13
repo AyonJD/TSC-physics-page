@@ -2,121 +2,9 @@ import React from 'react';
 import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
 import CourseSummery from './CourseSummery';
-import { IoIosPeople } from 'react-icons/io';
-import { BsBookHalf } from 'react-icons/bs';
-import { FiActivity } from 'react-icons/fi';
-import { RiErrorWarningFill } from 'react-icons/ri';
+import { notification, noticeBoardData, counterCardDara } from './Constant';
 
 const Physics = () => {
-    const notification = [
-        {
-            buttonColor: "secondary",
-            title: "Enrollment request for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "accent",
-            title: "Exam Schedule 8.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-        {
-            buttonColor: "neutral",
-            title: "Class Schedule 10.30 am for class 9-10 physics",
-            notificationTimer: "Student Name / 5 minute ago",
-        },
-    ];
-    const counterCardDara = [
-        {
-            title: "Course Students",
-            icon: <IoIosPeople></IoIosPeople>,
-            end: 23,
-        },
-        {
-            title: "Course Chapters",
-            icon: <BsBookHalf></BsBookHalf>,
-            end: 12,
-        },
-        {
-            title: "Course Activity",
-            icon: <FiActivity></FiActivity>,
-            end: 40,
-        },
-    ];
-
-    const noticeBoardData = [
-        {
-            buttonData: "No exams",
-            buttonColor: "secondary",
-            details: "No exam will be taken next thursday.",
-            timing: "5 minute ago",
-            icon: <RiErrorWarningFill></RiErrorWarningFill>
-        },
-        {
-            buttonData: "Extra Class",
-            buttonColor: "secondary",
-            details: "Extra class will be held 29th aug 10 am",
-            timing: "1 hour ago",
-            icon: <RiErrorWarningFill></RiErrorWarningFill>
-        },
-        {
-            buttonData: "Extra Class",
-            buttonColor: "warning",
-            details: "Mid exam will be taken thursday. & The syllabus: & -> Chapter 10 all & -> CHapter three",
-            timing: "2 days ago",
-            icon: <RiErrorWarningFill></RiErrorWarningFill>
-        },
-    ]
-
     return (
         <div className='container mx-auto'>
             <h1 className='text-4xl font-bold text-[#042954] py-8'>Course <span className='text-4xl'>&#8688;</span> Physics</h1>
@@ -153,8 +41,6 @@ const Physics = () => {
                             )
                         })
                     }
-
-
                 </div>
             </div>
 
