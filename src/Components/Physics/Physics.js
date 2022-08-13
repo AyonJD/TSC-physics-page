@@ -24,6 +24,56 @@ const Physics = () => {
             title: "Class Schedule 10.30 am for class 9-10 physics",
             notificationTimer: "Student Name / 5 minute ago",
         },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
+        {
+            buttonColor: "neutral",
+            title: "Class Schedule 10.30 am for class 9-10 physics",
+            notificationTimer: "Student Name / 5 minute ago",
+        },
     ];
     const counterCardDara = [
         {
@@ -89,13 +139,13 @@ const Physics = () => {
                         </div>
                     </div>
                 </div>
-                <div className="notification bg-white shadow-lg px-4 md:px-5 py-8">
-                    <h1 className='title_text'>Course Notification</h1>
+                <div className="notification max-h-[448px] overflow-y-auto bg-white shadow-lg px-4 md:px-5 pb-8">
+                    <h1 className='title_text sticky top-0 md:py-8 py-4 bg-white'>Course Notification</h1>
                     {
                         notification.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-${item?.buttonColor} w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
+                                    <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-secondary w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
                                     <h1 className='text-secondary w-fit font-medium hover:underline cursor-pointer'>{item.title}</h1>
                                     <small className='text-[#646464]'>Student Name / 5 minute ago</small>
                                     <hr />
@@ -110,8 +160,7 @@ const Physics = () => {
 
             {/* Course Summery */}
             <div className="business-summery mt-10 pb-10 grid px-4 md:px-5 sm:px-0 grid-cols-2 lg:grid-cols-4 gap-10 container mx-auto">
-                <div className="card bg-white md:px-5 px-2 lg:w-62 md:w-30 image-full mx-auto">
-                    <figure></figure>
+                <div className="card bg-white md:px-5 px-2 lg:w-62 md:w-30 image-full mx-auto rounded-sm">
                     <div className="card-body justify-end">
                         <div className=''>
                             <div className='text-center text-5xl font-bold text-base-100'>A+</div>
@@ -139,7 +188,7 @@ const Physics = () => {
                         noticeBoardData.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <div className={`bg-${item.buttonColor} rounded-full my-2 pl-3 py-2 flex items-center w-full`}>
+                                    <div className={`bg-secondary rounded-full my-2 pl-3 py-2 flex items-center w-full`}>
                                         <div className='text-3xl text-white'>{item.icon}</div>
                                         <h1 className='ml-2'>{item.buttonData}</h1>
                                     </div>

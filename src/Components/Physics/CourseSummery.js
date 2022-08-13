@@ -10,8 +10,7 @@ const CourseSummery = ({ icon, end, title, image }) => {
         duration: 5,
     });
     return (
-        <div className=" lg:w-62 md:z-30 bg-white image-full mx-auto">
-            <figure></figure>
+        <div className="card lg:w-62 md:z-30 bg-white image-full mx-auto rounded-sm">
             <div className="card-body">
                 <h2 className="card-title md:text-5xl text-3xl mx-auto text-base-100">{icon}</h2>
                 <div className='text-center text-4xl font-bold text-base-100' ref={countUpRef}></div>
