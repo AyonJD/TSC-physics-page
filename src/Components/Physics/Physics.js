@@ -3,6 +3,7 @@ import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
 import CourseSummery from './CourseSummery';
 import { notification, noticeBoardData, counterCardDara } from './Constant';
+import Clock from '../Clock/Clock';
 
 const Physics = () => {
     return (
@@ -33,7 +34,7 @@ const Physics = () => {
                         notification.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-secondary w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
+                                    <h1 className={`inline-bloxk mt-4 mb-2 text-white bg-accent w-fit px-4 py-1 rounded-full`}>16 June, 2022</h1>
                                     <h1 className='text-secondary w-fit font-medium hover:underline cursor-pointer'>{item.title}</h1>
                                     <small className='text-[#646464]'>Student Name / 5 minute ago</small>
                                     <hr />
@@ -67,14 +68,21 @@ const Physics = () => {
             </div>
 
             {/* Notice board */}
-            <div className="flex">
-                <div className="notice shadow-lg bg-white w-[65%] px-4 md:px-5 py-8">
+            <div className="md:flex">
+                <div className="schedule order-2 mb-8 md:mb-0 shadow-lg bg-white ml-auto md:w-[30%] w-full md:pb-8">
+                    <h1 className='title_text pt-8 pb-3 text-center'>Course Schedule</h1>
+                    <div className='bg-[#282828] py-4'>
+                        <Clock />
+                    </div>
+                </div>
+
+                <div className="notice shadow-lg bg-white md:w-[65%] w-full px-4 md:px-5 py-8">
                     <h1 className='title_text'>Notice Board</h1>
                     {
                         noticeBoardData.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <div className={`bg-secondary rounded-full my-2 pl-3 py-2 flex items-center w-full`}>
+                                    <div className={`bg-accent rounded-full my-2 pl-3 py-2 flex items-center w-full`}>
                                         <div className='text-3xl text-white'>{item.icon}</div>
                                         <h1 className='ml-2'>{item.buttonData}</h1>
                                     </div>
@@ -91,9 +99,7 @@ const Physics = () => {
                         })
                     }
                 </div>
-                <div className="schedule shadow-lg px-4 md:px-5 bg-white ml-auto w-[30%] py-8">
-                    <h1 className='title_text'>Course Schedule</h1>
-                </div>
+
             </div>
         </div >
     );
