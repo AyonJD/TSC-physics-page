@@ -14,3 +14,16 @@ body {
 .card.image-full {
     display: flex !important;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #006EDC);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00c6ff)
+}
