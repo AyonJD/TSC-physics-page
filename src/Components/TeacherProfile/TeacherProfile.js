@@ -6,7 +6,7 @@ const TeacherProfile = () => {
     return (
         <div className="container py-10 mx-auto">
             <div className="course_banner py-10 grid grid-cols-1 gap-10 md:grid-cols-2">
-                <div className="subject max-h-[448px] bg-white shadow-lg px-4 md:px-5 py-8 pb-28">
+                <div className="subject md:max-h-[448px] bg-white shadow-lg px-4 md:px-5 py-8 ">
                     <h1 className='text-4xl text-[#042954] font-semibold mb-6'>Teacher Profile</h1>
 
 
