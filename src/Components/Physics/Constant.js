@@ -163,3 +163,55 @@ export const classSchedule = [
         time: "11.00 AM",
     }
 ];
+
+export const chapterData = [
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 1",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 2",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 3",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 4",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 5",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 6",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 7",
+        chapterOption: "#"
+    },
+    {
+        chapterImage: "https://images.unsplash.com/photo-1622760061324-b479c8a2b203?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGh5c2ljc3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        chapterName: "Number System",
+        chapterSerial: "Chapter 8",
+        chapterOption: "#"
+    },
+
+]

@@ -2,11 +2,13 @@ import React from 'react';
 import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
 import CourseSummery from './CourseSummery';
-import { notification, noticeBoardData, counterCardDara, classSchedule } from './Constant';
+import { notification, noticeBoardData, counterCardDara, classSchedule, chapterData } from './Constant';
 import Clock from '../Clock/Clock';
+import { useNavigate } from 'react-router-dom';
 
 const Physics = () => {
-    const dayName = new Date().toLocaleString('en-US', { weekday: 'long' });
+    const currentDay = new Date().toLocaleString('en-US', { weekday: 'long' });
+    const navigate = useNavigate();
 
     return (
         <div className='container mx-auto'>
@@ -98,13 +100,13 @@ const Physics = () => {
                                 {
                                     classSchedule.map((time, index) => {
                                         return (
-                                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-200 dark:hover:bg-gray-600">
+                                            <tr key={index} className="bg-white border-gray-400 border-b dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-200 dark:hover:bg-gray-600">
 
 
-                                                <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
+                                                <td className={`font-medium py-4 px-6 ${currentDay === time.day && "bg-[#F9D671]"}`}>
                                                     {time.day}
                                                 </td>
-                                                <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
+                                                <td className={`font-medium py-4 px-6 ${currentDay === time.day && "bg-[#F9D671]"}`}>
                                                     {time.time}
                                                 </td>
 
@@ -147,37 +149,58 @@ const Physics = () => {
             </div>
 
             {/* Chapters */}
-            <div className='bg-white'>
-                <div className="overflow-x-auto relative shadow-md sm:rounded-lg md:mt-4">
+            <div className='mt-10'>
+                <div className="overflow-x-auto bg-white relative shadow-md sm:rounded-lg md:mt-4">
 
                     <table className="w-full hover text-sm text-left dark:text-gray-400">
-                        <thead className="text-xs text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                        <thead className="text-sm text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
 
                                 <th scope="col" className="py-3 px-6">
-                                    DAY
+                                    #
                                 </th>
                                 <th scope="col" className="py-3 px-6">
-                                    TIME
+                                    Chapter Icon
+                                </th>
+                                <th scope="col" className="py-3 px-6">
+                                    Chapter Name
+                                </th>
+                                <th scope="col" className="py-3 px-6">
+                                    Chapter Serial
+                                </th>
+                                <th scope="col" className="py-3 px-6">
+                                    Chapter Options
                                 </th>
 
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                classSchedule.map((time, index) => {
+                                chapterData.map((singleChapter, index) => {
                                     return (
-                                        <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-200 dark:hover:bg-gray-600">
+                                        <>
+                                            <tr key={index} className="bg-[#F4F4FE] border-b border-gray-400 dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-300 dark:hover:bg-gray-600">
 
 
-                                            <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
-                                                {time.day}
-                                            </td>
-                                            <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
-                                                {time.time}
-                                            </td>
+                                                <td className={`font-medium py-2 px-6`}>
+                                                    {index + 1}
+                                                </td>
+                                                <td className={`py-2 px-6`}>
+                                                    <img className='w-12 rounded-full p-1 image-shadow' src={singleChapter.chapterImage} alt="" />
+                                                </td>
+                                                <td className={`font-medium py-2 px-6`}>
+                                                    {singleChapter.chapterName}
+                                                </td>
+                                                <td className={`font-medium py-2 px-6`}>
+                                                    {singleChapter.chapterSerial}
+                                                </td>
+                                                <td className={`font-medium py-2 px-6`}>
+                                                    <button className='btn button-shadow btn-secondary btn-sm btn-outline button-shadow' onClick={() => navigate(`${singleChapter.chapterSerial}`)}>Open Course</button>
+                                                </td>
 
-                                        </tr>
+
+                                            </tr>
+                                        </>
 
                                     )
                                 })
@@ -185,7 +208,11 @@ const Physics = () => {
 
 
                         </tbody>
+
                     </table>
+                </div>
+                <div className="text-end w-[100%]">
+                    <button className='btn btn-primary my-5'>Show More</button>
                 </div>
             </div>
         </div >
