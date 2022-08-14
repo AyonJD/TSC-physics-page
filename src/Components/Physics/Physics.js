@@ -171,7 +171,7 @@ const Physics = () => {
             <div className='mt-10'>
                 <div className="overflow-x-auto bg-white relative shadow-md sm:rounded-lg md:mt-4">
 
-                    <table className="w-full hover text-sm text-left dark:text-gray-400">
+                    <table className="w-full hover text-xs md:text-sm text-left dark:text-gray-400">
                         <thead className="text-sm text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
 
@@ -213,11 +213,9 @@ const Physics = () => {
                                                 <td className={`font-medium py-2 px-6`}>
                                                     {singleChapter.chapterSerial}
                                                 </td>
-                                                <td className={`font-medium py-2 px-6`}>
-                                                    <button className='btn btn-secondary btn-sm btn-outline button-shadow' onClick={() => navigate(`${singleChapter.chapterSerial}`)}>Open Course</button>
+                                                <td className={`font-medium `}>
+                                                    <button className='btn sm:py-2 btn-secondary btn-sm btn-outline button-shadow text-xs' onClick={() => navigate(`${singleChapter.chapterSerial}`)}>Open Course</button>
                                                 </td>
-
-
                                             </tr>
                                         </>
 
