@@ -2,6 +2,7 @@ import { IoIosPeople } from 'react-icons/io';
 import { BsBookHalf } from 'react-icons/bs';
 import { FiActivity } from 'react-icons/fi';
 import { RiErrorWarningFill } from 'react-icons/ri';
+import studentImage from '../../assets/mem-2.png';
 
 export const notification = [
     {
@@ -214,4 +215,55 @@ export const chapterData = [
         chapterOption: "#"
     },
 
+]
+
+export const enrollmentNotification = [
+    {
+        studentImage: studentImage,
+        studentName: "John Doe",
+        studentID: "@studentName",
+        studentClass: "Class 9-10",
+        studentSubject: "Physics",
+        notificationTimer: "5 minutes ago",
+    },
+    {
+        studentImage: studentImage,
+        studentName: "John Doe",
+        studentID: "@studentName",
+        studentClass: "Class 9-10",
+        studentSubject: "Physics",
+        notificationTimer: "5 minutes ago",
+    },
+    {
+        studentImage: studentImage,
+        studentName: "John Doe",
+        studentID: "@studentName",
+        studentClass: "Class 9-10",
+        studentSubject: "Physics",
+        notificationTimer: "5 minutes ago",
+    },
+    {
+        studentImage: studentImage,
+        studentName: "John Doe",
+        studentID: "@studentName",
+        studentClass: "Class 9-10",
+        studentSubject: "Physics",
+        notificationTimer: "5 minutes ago",
+    },
+    {
+        studentImage: studentImage,
+        studentName: "John Doe",
+        studentID: "@studentName",
+        studentClass: "Class 9-10",
+        studentSubject: "Physics",
+        notificationTimer: "5 minutes ago",
+    },
+    {
+        studentImage: studentImage,
+        studentName: "John Doe",
+        studentID: "@studentName",
+        studentClass: "Class 9-10",
+        studentSubject: "Physics",
+        notificationTimer: "5 minutes ago",
+    },
 ]
