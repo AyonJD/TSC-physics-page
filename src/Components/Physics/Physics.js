@@ -2,10 +2,12 @@ import React from 'react';
 import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
 import CourseSummery from './CourseSummery';
-import { notification, noticeBoardData, counterCardDara } from './Constant';
+import { notification, noticeBoardData, counterCardDara, classSchedule } from './Constant';
 import Clock from '../Clock/Clock';
 
 const Physics = () => {
+    const dayName = new Date().toLocaleString('en-US', { weekday: 'long' });
+
     return (
         <div className='container mx-auto'>
             <h1 className='text-4xl font-bold text-[#042954] py-8'>Course <span className='text-4xl'>&#8688;</span> Physics</h1>
@@ -69,14 +71,56 @@ const Physics = () => {
 
             {/* Notice board */}
             <div className="md:flex">
-                <div className="schedule order-2 mb-8 md:mb-0 shadow-lg bg-white ml-auto md:w-[30%] w-full md:pb-8">
+                <div className="schedule order-2 mb-8 md:mb-0 shadow-lg bg-white ml-auto md:w-[30%] w-full">
                     <h1 className='title_text pt-8 pb-3 text-center'>Course Schedule</h1>
                     <div className='bg-[#282828] py-4'>
                         <Clock />
                     </div>
+
+                    {/* Class Schedule */}
+
+
+                    <div className="overflow-x-auto relative shadow-md sm:rounded-lg mt-4">
+
+                        <table className="w-full hover text-sm text-left dark:text-gray-400">
+                            <thead className="text-sm text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+
+                                    <th scope="col" className="py-3 px-6">
+                                        DAY
+                                    </th>
+                                    <th scope="col" className="py-3 px-6">
+                                        TIME
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    classSchedule.map((time, index) => {
+                                        return (
+                                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-200 dark:hover:bg-gray-600">
+
+
+                                                <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
+                                                    {time.day}
+                                                </td>
+                                                <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
+                                                    {time.time}
+                                                </td>
+
+                                            </tr>
+
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+
                 </div>
 
-                <div className="notice shadow-lg bg-white md:w-[65%] w-full px-4 md:px-5 py-8">
+                <div className="notice shadow-lg max-h-[627px] overflow-y-auto bg-white md:w-[65%] w-full px-4 md:px-5 py-8">
                     <h1 className='title_text'>Notice Board</h1>
                     {
                         noticeBoardData.map((item, index) => {
@@ -100,6 +144,49 @@ const Physics = () => {
                     }
                 </div>
 
+            </div>
+
+            {/* Chapters */}
+            <div className='bg-white'>
+                <div className="overflow-x-auto relative shadow-md sm:rounded-lg md:mt-4">
+
+                    <table className="w-full hover text-sm text-left dark:text-gray-400">
+                        <thead className="text-xs text-white uppercase bg-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+
+                                <th scope="col" className="py-3 px-6">
+                                    DAY
+                                </th>
+                                <th scope="col" className="py-3 px-6">
+                                    TIME
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                classSchedule.map((time, index) => {
+                                    return (
+                                        <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-200 dark:hover:bg-gray-600">
+
+
+                                            <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
+                                                {time.day}
+                                            </td>
+                                            <td className={`font-medium py-4 px-6 ${dayName === time.day && "bg-[#F9D671]"}`}>
+                                                {time.time}
+                                            </td>
+
+                                        </tr>
+
+                                    )
+                                })
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div >
     );

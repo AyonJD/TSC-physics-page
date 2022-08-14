@@ -91,7 +91,35 @@ export const counterCardDara = [
 
 export const noticeBoardData = [
     {
-        buttonData: "No exAMs",
+        buttonData: "No Exams",
+        buttonColor: "secondary",
+        details: "No exAM will be taken next thursday.",
+        timing: "5 minute ago",
+        icon: <RiErrorWarningFill></RiErrorWarningFill>
+    },
+    {
+        buttonData: "No Exams",
+        buttonColor: "secondary",
+        details: "No exAM will be taken next thursday.",
+        timing: "5 minute ago",
+        icon: <RiErrorWarningFill></RiErrorWarningFill>
+    },
+    {
+        buttonData: "No Exams",
+        buttonColor: "secondary",
+        details: "No exAM will be taken next thursday.",
+        timing: "5 minute ago",
+        icon: <RiErrorWarningFill></RiErrorWarningFill>
+    },
+    {
+        buttonData: "No Exams",
+        buttonColor: "secondary",
+        details: "No exAM will be taken next thursday.",
+        timing: "5 minute ago",
+        icon: <RiErrorWarningFill></RiErrorWarningFill>
+    },
+    {
+        buttonData: "No Exams",
         buttonColor: "secondary",
         details: "No exAM will be taken next thursday.",
         timing: "5 minute ago",
@@ -115,6 +143,10 @@ export const noticeBoardData = [
 
 export const classSchedule = [
     {
+        day: "Sunday",
+        time: "10.30 AM",
+    },
+    {
         day: "Monday",
         time: "10.30 AM",
     },
@@ -129,9 +161,5 @@ export const classSchedule = [
     {
         day: "Thursday",
         time: "11.00 AM",
-    },
-    {
-        day: "Friday",
-        time: "11.30 AM",
     }
 ];
