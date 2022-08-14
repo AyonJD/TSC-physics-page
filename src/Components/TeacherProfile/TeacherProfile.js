@@ -1,6 +1,6 @@
 import React from 'react';
-import CourseNotification from '../Physics/CourseNotification';
 import CourseImage from '../../assets/Ellipse-18.svg';
+import EnrollmentNotification from './EnrollmentNotification';
 
 const TeacherProfile = () => {
     return (
@@ -20,7 +20,7 @@ const TeacherProfile = () => {
 
                     </div>
                 </div>
-                <CourseNotification />
+                <EnrollmentNotification />
             </div>
         </div>
     );

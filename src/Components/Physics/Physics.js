@@ -54,7 +54,7 @@ const Physics = () => {
                                 <img className='lg:w-1/2 sm:w-2/3 w-full mx-auto' src={CourseImage} alt="" />
                                 <img className='lg:w-1/4 md:bottom-5 sm:-bottom-5 sm:w-1/3 w-1/2 absolute bottom-0 right-1/4' src={InsImage} alt="" />
                             </div>
-                            <button className='absolute btn btn-primary btn-md right-16 -bottom-24'>Start Class</button>
+                            <button className='absolute btn-primary py-2 rounded font-medium px-10 right-16 -bottom-24'>Start Class</button>
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ const Physics = () => {
                                                     {singleChapter.chapterSerial}
                                                 </td>
                                                 <td className={`font-medium py-2 px-6`}>
-                                                    <button className='btn button-shadow btn-secondary btn-sm btn-outline button-shadow' onClick={() => navigate(`${singleChapter.chapterSerial}`)}>Open Course</button>
+                                                    <button className='btn btn-secondary btn-sm btn-outline button-shadow' onClick={() => navigate(`${singleChapter.chapterSerial}`)}>Open Course</button>
                                                 </td>
 
 
@@ -224,7 +224,7 @@ const Physics = () => {
                     </table>
                 </div>
                 <div className="text-end w-[100%]">
-                    <button className='btn btn-primary my-5'>Show More</button>
+                    <button className='py-2 rounded font-medium px-10 btn-primary my-5'>Show More</button>
                 </div>
             </div>
         </div >
