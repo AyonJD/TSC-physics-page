@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CourseImage from '../../assets/Ellipse-18.svg'
 import InsImage from '../../assets/Ellipse-19.svg'
 import CourseSummery from './CourseSummery';
@@ -10,6 +10,13 @@ import CourseNotification from './CourseNotification';
 const Physics = () => {
     const currentDay = new Date().toLocaleString('en-US', { weekday: 'long' });
     const navigate = useNavigate();
+    const [numberOfChapterData, setNumberOfChapterData] = useState(4)
+    const slicedChapterData = chapterData.slice(0, numberOfChapterData);
+    const handleChapterData = () => {
+        setNumberOfChapterData(numberOfChapterData + 2);
+    }
+
+    console.log(slicedChapterData.length === chapterData.length);
 
     return (
         <div className='container mx-auto'>
@@ -25,13 +32,13 @@ const Physics = () => {
 
                     <li aria-current="page">
                         <div className="flex items-center">
-                            <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
                             <span className="ml-1 cursor-pointer text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Course</span>
                         </div>
                     </li>
                     <li aria-current="page">
                         <div className="flex items-center">
-                            <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
                             <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400 cursor-pointer">Physics</span>
                         </div>
                     </li>
@@ -188,7 +195,7 @@ const Physics = () => {
                         </thead>
                         <tbody>
                             {
-                                chapterData.map((singleChapter, index) => {
+                                slicedChapterData.map((singleChapter, index) => {
                                     return (
                                         <>
                                             <tr key={index} className="bg-[#F4F4FE] border-b border-gray-400 dark:bg-gray-800 dark:border-gray-700 text-black hover:bg-gray-300 dark:hover:bg-gray-600">
@@ -224,7 +231,7 @@ const Physics = () => {
                     </table>
                 </div>
                 <div className="text-end w-[100%]">
-                    <button className='py-2 rounded font-medium px-10 btn-primary my-5'>Show More</button>
+                    <button onClick={handleChapterData} className={`py-2 rounded font-medium px-10 btn-primary my-5 ${slicedChapterData.length === chapterData.length && "hidden"}`}>Show More</button>
                 </div>
             </div>
         </div >

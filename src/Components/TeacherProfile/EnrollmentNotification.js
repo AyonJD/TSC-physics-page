@@ -1,12 +1,11 @@
 import React from 'react';
-import { enrollmentNotification, notification } from '../Physics/Constant';
-import studentImate from '../../assets/mem-2.png';
+import { enrollmentNotification } from '../Physics/Constant';
 
 const EnrollmentNotification = () => {
     return (
         <>
             <div className="notification max-h-[448px] overflow-y-auto bg-white shadow-lg px-4 md:px-5 pb-8">
-                <h1 className='title_text sticky top-0 md:pt-8 py-4 bg-white'>Course Notification</h1>
+                <h1 className='title_text sticky top-0 md:pt-8 py-4 bg-white'>Enrollment Request</h1>
                 {
                     enrollmentNotification.map((item, index) => {
                         return (
@@ -26,9 +25,9 @@ const EnrollmentNotification = () => {
                                     </div>
                                 </div>
                                 <div className='flex items-center justify-between mt-2'>
-                                    <small className='text-[#646464]'>{ item.studentClass}</small>
-                                    <small className='text-[#646464]'>{ item.studentSubject}</small>
-                                    <small className='text-[#646464]'>{ item.notificationTimer}</small>
+                                    <small className='text-[#646464]'>{item.studentClass}</small>
+                                    <small className='text-[#646464]'>{item.studentSubject}</small>
+                                    <small className='text-[#646464]'>{item.notificationTimer}</small>
                                 </div>
                                 <hr />
                             </div>
