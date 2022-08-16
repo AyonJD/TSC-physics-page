@@ -72,7 +72,7 @@ const Physics = () => {
 
                 {/* Course Summery */}
                 <div className="business-summery mt-10 pb-10 grid px-4 grid-cols-2 gap-10 mid_container mx-auto">
-                    <div className="card single_card px-2 image-full mx-auto rounded-sm">
+                    <div className="card course_summery_card single_card px-2 image-full mx-auto rounded-sm">
                         <div className="card-body justify-end">
                             <div className=''>
                                 <div className='text-center initial_counter text-5xl font-bold'>A+</div>

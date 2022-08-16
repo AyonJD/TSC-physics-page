@@ -274,6 +274,11 @@
     line-height: 1.25rem;
 }
 
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
 .font-medium {
     font-weight: 500;
 }
@@ -572,8 +577,17 @@
 
 @media (min-width: 768px) {
     .initial_counter_detail {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 2rem;
+    }
+
+
+}
+
+
+@media (min-width: 640px) {
+    .course_summery_card {
+        width: 15rem;
     }
 }
 
@@ -828,5 +842,25 @@
     .notification .course_notification {
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
+}
+
+/* Course Summery Component */
+.bg-white {
+    background-color: #fff;
+}
+
+.card_icon {
+    color: #042954;
+}
+
+.card_counter {
+    color: #042954;
+}
+
+@media (min-width: 768px) {
+    .card_icon {
+        font-size: 3rem;
+        line-height: 1;
     }
 }

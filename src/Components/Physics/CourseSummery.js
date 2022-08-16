@@ -10,11 +10,11 @@ const CourseSummery = ({ icon, end, title, image }) => {
         duration: 5,
     });
     return (
-        <div className="card lg:w-62 md:z-30 bg-white image-full mx-auto rounded-sm">
-            <div className="card-body">
-                <h2 className="card-title md:text-5xl text-3xl mx-auto text-base-100">{icon}</h2>
-                <div className='text-center text-4xl font-bold text-base-100' ref={countUpRef}></div>
-                <p className='text-center md:text-2xl text-xl font-medium text-base-100'>{title}</p>
+        <div className="card single_card course_summery_card px-2 image-full mx-auto rounded-sm">
+            <div className="card-body justify-end">
+                <h2 className="card-title card_icon text-3xl mx-auto">{icon}</h2>
+                <div className='text-center text-4xl font-bold card_counter' ref={countUpRef}></div>
+                <p className='text-center text-xl font-medium initial_counter_detail'>{title}</p>
             </div>
         </div>
 
