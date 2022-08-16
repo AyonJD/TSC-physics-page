@@ -11,7 +11,7 @@ const EnrollmentNotification = () => {
                         return (
                             <div key={index}>
                                 <h1 className='text-[#324D90] text-md font-medium my-4'>Enrollment Request</h1>
-                                <div className='flex justify-between items-enter'>
+                                <div className='flex justify-between items-center'>
                                     <div className='flex items-center'>
                                         <img className='w-12' src={item.studentImage} alt="" />
                                         <div className='ml-5'>
