@@ -360,6 +360,10 @@
     margin-bottom: 1.5rem;
 }
 
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
 .mt-16 {
     margin-top: 4rem;
 }
@@ -779,4 +783,50 @@
 /* Show More button */
 .rounded {
     border-radius: 0.25rem;
+}
+
+/* Course Notification Component */
+.notification {
+    max-height: 448px;
+    background-color: #fff;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.top-0 {
+    top: 0px;
+}
+
+.notification .course_notification {
+    background-color: #fff;
+}
+
+.course_notification_date {
+    color: #fff;
+    background-color: #F04F36;
+}
+
+.course_notification_title {
+    color: #006EDC;
+}
+
+.course_notification_title:hover {
+    text-decoration: underline;
+}
+
+.notification small {
+    color: #646464;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .notification .course_notification {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
